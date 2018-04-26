@@ -1,0 +1,13 @@
+extends index.pug
+
+block head
+	title.home-head Uploads
+	link.index(rel='stylesheet',src='text/css',href='/uploads.css')
+	script.home-head(src='./uploads.js')
+
+
+block content
+	.super-bg(style='background-image: linear-gradient(#00f, #ffb); opacity: 1;')
+	input(id="upload-input",type="file",name="uploads[]",multiple="multiple")
+	div#upload-container
+		button#upload-button Upload File

@@ -1,0 +1,8 @@
+.super-bg {
+	position: absolute;
+	z-index: -9001;
+	top: 0px;
+	height: -webkit-fill-available;
+	width: -webkit-fill-available;
+	transition: opacity 0.5s ease-in-out;
+}

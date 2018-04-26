@@ -1,0 +1,31 @@
+extends ../index.pug
+
+block head
+	title Neural Network
+	script(async="false" src='./home.js')
+	script( src='/Other/chart.js')
+	link.index(rel='stylesheet',src='text/css',href='./home.css')
+	style .super{height:3000px;background-color: #060B0F;} .super>* {color:#fff;}
+	
+
+
+block content
+	svg(display="none")
+		defs
+			filter(id="trainImg")
+				feColorMatrix(in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  256 0 0 0 0")
+	div
+		h1 Neural Net Yeah!!
+		button#NNGuess(style="display:inline-block;") New Guess
+		button#NNTrain(style="display:inline-block;") Start Training
+		button#NNInput(style="display:inline-block;") Guess
+		br
+		div(style="width:196px;display:inline-block;height:196px;position:absolute;")
+			canvas#dataBMP
+			div.label(style="bottom:-4px;right:0px;position:absolute;") ?
+		div
+			div(style="position:absolute;left:320px;display:inline-block;width:50px;height:50px;border-width:2px;border-style:solid;border-color:#ee1")
+				div.guess(style="font-size:50px;text-align:center;line-height:50px;height:50px;") ?
+				div.prob(style="font-size:15px;") 
+		div(style="position: absolute;left: 400px;")
+			canvas#costchart(style="width:700px;")

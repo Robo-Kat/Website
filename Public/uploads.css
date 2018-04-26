@@ -1,0 +1,24 @@
+#upload-input {
+	display: none;
+}
+
+#upload-container {
+	position: absolute;
+	top: 30%;
+	bottom: 30%;
+	right: 40%;
+	left: 35%;
+	background-color: #FFF;
+	border-radius: 15%
+
+}
+
+#upload-button {
+  color: #ffffff;
+  background-color: #F89406;
+  border: none;
+}
+
+#upload-button:active,#upload-button:focus,#upload-button:hover {
+	background-color: #FA8900;
+}

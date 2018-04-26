@@ -1,0 +1,44 @@
+//- navMenuItem(title, {name:"name",link:"link"},...) for dropdown
+//- or navMenuItem({name:"name",link:"link"}) for single item
+
+mixin navMenuItem(title,...links)
+	if links.length!==0
+		section.nav-menu-dropdown
+			div.nav-menu-dropdown-toggle(class='-hidden')
+				div.nav-menu-item-header #{title}
+				svg.nav-menu-downArrow
+					path(fill="#fff",d="M 0 1 L 1 0 L 6 4 L 11 0 L 12 1 L 6 6 Z")
+			nav.nav-menu-dropdown-list
+				-for(var i=0;i<links.length;i++) 
+					a.nav-menu-link(href=links[i].link) #{links[i].name}
+	else
+		section.nav-menu-item
+			nav.nav-menu-single-link
+				a.nav-menu-link(href=title.link) #{title.name}
+
+			
+
+
+
+
+doctype html
+head
+	link.index(rel='icon',src='image/png',href='/icon.png')
+	link.index(rel='stylesheet',src='text/css',href='/index.css')
+	script.index(src='/index.js')
+	block head
+
+body
+	div.menu-bar
+		nav.nav-menu(role='navigation')
+			a#nav-menu-bar-title(class='nav-menu-link',href='/') #[b THING]
+			+navMenuItem('a dropdown',{name:'Neural Network',link:'/Neural%20Network/home.html'},{name:'entry #2',link:'javascript:void(0)'})
+			+navMenuItem('file sharing',{name:'uploads',link:'/uploads.html'},{name:'entry #2',link:'javascript:void(0)'},{name:'entry #3',link:'javascript:void(0)'})
+			+navMenuItem({name:'Chatroom',link:'/chat.html'})
+	div
+		
+
+	div.super
+		block content
+			h1 404 - Page Not Found
+

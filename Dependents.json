@@ -1,0 +1,7 @@
+{
+	"index.html":						["index.js","index.css"],
+	"home.html":						["home.js","home.css","home.css","index.js","index.css"],
+	"chat.html":						["chat.js","chat.css","index.js","index.css"],
+	"Neural Network/home.html":			["Neural Network/home.js","Neural Network/home.css","Neural Network/worker.js","Neural Network/data","Other/chart.js","index.js","index.css"]
+
+}

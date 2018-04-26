@@ -1,0 +1,13 @@
+extends index.pug
+
+block head
+	title.home-head home
+	script.home-head(src='./home.js')
+	link.index(rel='stylesheet',src='text/css',href='/home.css')
+	style.home-head .super{height:3000px;}
+
+
+block content
+	.super-bg(style='background-image: linear-gradient(#777777, #f0f); opacity: 1;')
+	.super-bg(style='background-image: linear-gradient(#777777, #0f0); opacity: 0;')
+	h1 Whatup my dude?

@@ -1,0 +1,8 @@
+#dataBMP {
+	 image-rendering: pixelated; 
+	width: 100%;
+	 filter: url(#trainImg); 
+	border-color: #1b14ed;
+	border-width:  3px;
+	border-style:  solid;
+}

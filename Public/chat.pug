@@ -1,0 +1,15 @@
+extends index.pug
+
+
+block head
+	title.chat-head Chatroom
+	link.index(rel='stylesheet',src='text/css',href='/chat.css')
+	script.chat-head(src='./chat.js')
+
+
+
+block content
+	ul#messages
+	form.chat(action='')
+		input.chat-input(autocomplete='off')
+		button.chat-send Send
